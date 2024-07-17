@@ -21,7 +21,7 @@ This is a beginner-level Rock Paper Scissors project developed as part of The Od
 3. The winner is determined based on the traditional Rock Paper Scissors rules.
 4. The scores are updated, and the game announces the winner after a set number of rounds.
 
-(hopefully i will all these when i complete the intermediate level of js)
+(hopefully i will implement all these when i complete the intermediate level of js)
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a pull request or open an issue to suggest improvements or report bugs.
