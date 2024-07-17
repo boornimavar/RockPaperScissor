@@ -90,6 +90,9 @@ header{
    height:100px; 
    background-color: hotpink;
    text-align: center;
+   color: white;
+   text-align: center;
+   font-size: 20px;
 }
 
 #shining-div {
@@ -162,9 +165,4 @@ header{
     height: 100px;
     border-radius: 50%;
     align-self: center;  
-}
-
-h2{
-    
-
 }

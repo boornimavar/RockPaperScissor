@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stone Paper Scissor</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
 </head>
 <body>
     <header>
@@ -16,36 +19,50 @@
         <div class="choices">
             <button id="rock">
                 <div class="rock">
-                    <!-- <img src="./images/stone.png"> -->
+                    <i class="fas fa-hand-rock"></i>
                 </div>
             </button>
             <button id="paper">
                 <div class="paper">
-                    <!-- <img src="./images/file.png"> -->
+                    <i class="fas fa-hand-paper"></i>
                 </div>
             </button>
             <button id="scissors">
                 <div class="scissors">
-                    <!-- <img src="./images/scissor.png"> -->
+                    <i class="fas fa-hand-scissors"></i>
                 </div>
             </button>
         </div>
         <div class="score-board">
-            <div class="score">
+            <div class="score" id="shining-div">
                 <h1>Score Board</h1>
             </div>
             <div class="competitors">
                 <div class="user">
-                    <img src="">
+                   <div class="you">
+                     <img src="./images/user2.png" id="user1">
+                    </div> 
+                    <div class="count">
+                        <h2 id="your-score">you:0</h2>
+                    </div>
                 </div>
                 <div class="computer">
-                    <img src="">
+                    <div class="you">
+                        <img src="./images/user2.png" id="user2">
+                    </div>
+                    <div class="count">
+                        <h2 id="comp-score">computer:0</h2>
+                    </div>
                 </div>
             </div>
             <div class="status">
-                <p>THE BATTLE</p>
+                <p id="score-review">THE BATTLE</p>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
+    
 </body>
+
+
 </html>
