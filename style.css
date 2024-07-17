@@ -11,15 +11,19 @@ body{
     align-items: center;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-}
 
 header{
-  background-color: rgb(145, 221, 207);
+  background-color: rgb(50, 1, 47);
   text-align: center;
   width: 100%;
 }
+
+header h1{
+    font-family: "Kalnia Glaze", serif;
+        font-optical-sizing: auto;
+        
+}
+
 
 .container{
     display: grid;
@@ -43,7 +47,7 @@ header{
     background-color: goldenrod;
     width: 100%;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .competitors {
@@ -51,12 +55,10 @@ header{
     flex-direction: row;
     gap:20px;
     box-shadow: 0 4px 8px rgba(8, 8, 8, 0.459);
-    padding: 20px;
+   
    
     
 }
-
-
 
 .user,.computer{
     width: 250px;
@@ -66,15 +68,17 @@ header{
     flex-direction: column;
     text-align: center;
     padding-top: 15px;
+    border:2px solid black;
 }
 
 .you{
-    background-color: #7bfeed;
+    background-color: hotpink;
     padding: 20px;
     width: 100px;
     height: 100px;
     border-radius: 50%;
     align-self: center; 
+    border:2px solid black;
 }
 
 .choices{
@@ -82,18 +86,36 @@ header{
     
 }
 
-
-
 .status{
+   display: flex;
+   flex-direction: column;
    margin-top: 20px;
    width: 550px;
-   height:100px; 
-   background-color: hotpink;
+   height: 100px;
+   background-color: rgb(50, 1, 47);
+   font-family: "Kalnia Glaze", serif;
+   font-optical-sizing: auto;
    text-align: center;
    color: white;
    text-align: center;
-   font-size: 20px;
+   font-size: 40px;
 }
+
+.status p{
+  margin-top: 20px;
+}
+
+.status button{
+  align-self: center;
+  position: absolute;
+  padding: 10px;
+  margin-top: 110px;
+  background-color: goldenrod;
+  color:black;
+  cursor: pointer;
+  border: none;
+}
+
 
 #shining-div {
     position: relative;
@@ -127,10 +149,16 @@ header{
 
 .choices {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+.char{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
 }
 
 .choices .rock, .choices .paper, .choices .scissors {
@@ -147,6 +175,12 @@ header{
     transition: background-color 0.3s ease;
 }
 
+.cast{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
 .choices .rock:hover, .choices .paper:hover, .choices .scissors:hover {
     background-color: blanchedalmond;
     cursor: pointer;
@@ -155,7 +189,6 @@ header{
 
 .choices button{
     border: none;
-    outline: none;
 }
 
 
@@ -166,3 +199,26 @@ header{
     border-radius: 50%;
     align-self: center;  
 }
+
+.role{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.role .as{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border:2px solid black;
+    text-align: center;
+   
+}
+
+.role .as p{
+   margin-top:40px ;
+   font-size: 30px;
+   font-style: bold;
+  
+}
+
