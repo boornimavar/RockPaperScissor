@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const scissorBtn = document.getElementById('scissors');
     const playerChoice = document.getElementById('user1');
     const computerChoice = document.getElementById('user2');
+    const gameOver = document.getElementById('game-over');
+    const resume = document.getElementById('play-again');
 
     const dwane = './images/rock.jpeg';
     const willi = './images/willi.jpeg';
@@ -42,6 +44,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function displayWinner(humanScore, computerScore) {
+        if (humanScore > computerScore) {
+            gameOver.innerText = "YOU WON";
+        } else if (humanScore < computerScore) {
+            gameOver.innerText = "COMPUTER WON";
+        } else {
+            gameOver.innerText = "IT'S A TIE";
+        }
+    }
+
     function handlePlayerPick(playerIndex, playerImage) {
         if (turns > 0) {
             playerChoice.src = playerImage;
@@ -50,15 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
             turns--;
 
             if (turns === 0) {
-                setTimeout(() => {
-                    alert("Game over");
-                    const playAgain = confirm("Do you want to play again?");
-                    if (playAgain) {
-                        resetGame();
-                    } else {
-                        alert("Thanks for playing!");
-                    }
-                }, 100);
+                displayWinner(humanScore, computerScore);
+                resume.style.display = 'block';
             }
         }
     }
@@ -71,10 +76,17 @@ document.addEventListener('DOMContentLoaded', function() {
         computerScoreElem.innerText = "Computer: 0";
         playerChoice.src = './images/user2.png';
         computerChoice.src = './images/user2.png';
-        battleUpdate.innerText = "BATTLEFIELD";
+        battleUpdate.innerText = "THE BATTLE";
+        gameOver.innerText = "Score Board";
+        resume.style.display = 'none';
+    }
+
+    function playAgain() {
+        resetGame();
     }
 
     rockBtn.addEventListener('click', () => handlePlayerPick(0, dwane));
     paperBtn.addEventListener('click', () => handlePlayerPick(1, willi));
     scissorBtn.addEventListener('click', () => handlePlayerPick(2, sza));
+    resume.addEventListener('click', playAgain);
 });
