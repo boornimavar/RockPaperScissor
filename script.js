@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const gameOver = document.getElementById('game-over');
     const resume = document.getElementById('play-again');
 
-    const dwane = './images/rock.jpeg';
-    const willi = './images/willi.jpeg';
+    const rock = './images/rock.jpeg';
+    const william = './images/william.jpeg';
     const sza = './images/sza.jpg';
-    const selectionList = [dwane, willi, sza];
+    const selectionList = [rock, william, sza];
 
     function computerPick() {
         const randomIndex = Math.floor(Math.random() * selectionList.length);
@@ -34,15 +34,16 @@ document.addEventListener('DOMContentLoaded', function() {
             (playerIndex === 1 && computerIndex === 0) ||
             (playerIndex === 2 && computerIndex === 1)
         ) {
-            battleUpdate.innerText = `${selectionList[playerIndex].split('/').pop().split('.')[0].replace('.jpeg', '')} beats ${selectionList[computerIndex].split('/').pop().split('.')[0].replace('.jpeg', '')}`;
+            battleUpdate.innerText = `${selectionList[playerIndex].split('/').pop().split('.')[0].replace('.jpeg', '')} defeats ${selectionList[computerIndex].split('/').pop().split('.')[0].replace('.jpeg', '')}`;
             humanScore++;
             userScore.innerText = `You: ${humanScore}`;
         } else {
-            battleUpdate.innerText = `${selectionList[computerIndex].split('/').pop().split('.')[0].replace('.jpeg', '')} beats ${selectionList[playerIndex].split('/').pop().split('.')[0].replace('.jpeg', '')}`;
+            battleUpdate.innerText = `${selectionList[computerIndex].split('/').pop().split('.')[0].replace('.jpeg', '')} defeats ${selectionList[playerIndex].split('/').pop().split('.')[0].replace('.jpeg', '')}`;
             computerScore++;
             computerScoreElem.innerText = `Computer: ${computerScore}`;
         }
     }
+
 
     function displayWinner(humanScore, computerScore) {
         if (humanScore > computerScore) {
@@ -85,8 +86,8 @@ document.addEventListener('DOMContentLoaded', function() {
         resetGame();
     }
 
-    rockBtn.addEventListener('click', () => handlePlayerPick(0, dwane));
-    paperBtn.addEventListener('click', () => handlePlayerPick(1, willi));
+    rockBtn.addEventListener('click', () => handlePlayerPick(0, rock));
+    paperBtn.addEventListener('click', () => handlePlayerPick(1, william));
     scissorBtn.addEventListener('click', () => handlePlayerPick(2, sza));
     resume.addEventListener('click', playAgain);
 });
