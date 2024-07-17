@@ -1,0 +1,170 @@
+body{  
+    background: linear-gradient(to right, #ff7e5f, #7bfeed);
+
+    margin:0;
+    padding:0;
+    width:100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+  background-color: rgb(145, 221, 207);
+  text-align: center;
+  width: 100%;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* flex-direction: row; */
+    justify-content:center;
+    width:100%;
+    flex: 1;
+}
+
+
+.score-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+   
+}
+
+.score{
+    background-color: goldenrod;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.competitors {
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    box-shadow: 0 4px 8px rgba(8, 8, 8, 0.459);
+    padding: 20px;
+   
+    
+}
+
+
+
+.user,.computer{
+    width: 250px;
+    height: 200px;
+    background-color: rgb(247, 249, 242);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.you{
+    background-color: #7bfeed;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    align-self: center; 
+}
+
+.choices{
+    background-color: rgb(247, 249, 242);
+    
+}
+
+
+
+.status{
+   margin-top: 20px;
+   width: 550px;
+   height:100px; 
+   background-color: hotpink;
+   text-align: center;
+}
+
+#shining-div {
+    position: relative;
+    font-size: 20px;
+    color: white;
+    overflow: hidden;
+}
+
+#shining-div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.2));
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.choices .rock, .choices .paper, .choices .scissors {
+    background-color: goldenrod;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.choices .rock:hover, .choices .paper:hover, .choices .scissors:hover {
+    background-color: blanchedalmond;
+    cursor: pointer;
+    color:black;
+}
+
+.choices button{
+    border: none;
+    outline: none;
+}
+
+
+.you img{
+   
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    align-self: center;  
+}
+
+h2{
+    
+
+}
